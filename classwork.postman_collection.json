@@ -198,6 +198,19 @@
 		},
 		{
 			"name": "Create Product",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var vbn = pm.response.json();\r",
+							"pm.collectionVariables.set(\"productID\", vbn.data.id);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
 			"request": {
 				"auth": {
 					"type": "bearer"
@@ -261,7 +274,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://radio-shop.megaplan.by/api/v3/offer/3713",
+					"raw": "https://radio-shop.megaplan.by/api/v3/offer/{{productID}}",
 					"protocol": "https",
 					"host": [
 						"radio-shop",
@@ -272,7 +285,7 @@
 						"api",
 						"v3",
 						"offer",
-						"3713"
+						"{{productID}}"
 					]
 				}
 			},
@@ -301,7 +314,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://radio-shop.megaplan.by/api/v3/offer/3713",
+					"raw": "https://radio-shop.megaplan.by/api/v3/offer/{{productID}}",
 					"protocol": "https",
 					"host": [
 						"radio-shop",
@@ -312,7 +325,7 @@
 						"api",
 						"v3",
 						"offer",
-						"3713"
+						"{{productID}}"
 					]
 				}
 			},
@@ -341,7 +354,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://radio-shop.megaplan.by/api/v3/offer/3713",
+					"raw": "https://radio-shop.megaplan.by/api/v3/offer/{{productID}}",
 					"protocol": "https",
 					"host": [
 						"radio-shop",
@@ -352,7 +365,7 @@
 						"api",
 						"v3",
 						"offer",
-						"3713"
+						"{{productID}}"
 					]
 				}
 			},
@@ -384,7 +397,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://radio-shop.megaplan.by/api/v3/offer/3713",
+					"raw": "https://radio-shop.megaplan.by/api/v3/offer/{{productID}}",
 					"protocol": "https",
 					"host": [
 						"radio-shop",
@@ -395,7 +408,7 @@
 						"api",
 						"v3",
 						"offer",
-						"3713"
+						"{{productID}}"
 					]
 				}
 			},
@@ -433,6 +446,11 @@
 		{
 			"key": "contractorID",
 			"value": "1273419",
+			"type": "string"
+		},
+		{
+			"key": "productID",
+			"value": "3768",
 			"type": "string"
 		}
 	]
